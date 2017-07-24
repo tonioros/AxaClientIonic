@@ -35,10 +35,17 @@ $app-direction: ltr;
 
 $colors: (
   primary:    #488aff,
-  secondary:  #32db64,
   danger:     #f53d3d,
   light:      #f4f4f4,
-  dark:       #222
+  dark:       #222,
+  greenFlat:  rgb(35,169, 110),
+  greenDown:  rgb(12,119, 73),
+  greenUp:    rgb(85,229, 168),
+  obscuro:    rgb(40,49,78),
+  transparent:rgba(0,0,0,0.01),
+  aquaFlat:   rgb(27,188,155),
+  amarillo:   rgb(255,213,43),
+  grayFlat:   #e3e3e3
 );
 
 
