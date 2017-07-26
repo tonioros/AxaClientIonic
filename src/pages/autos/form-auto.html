@@ -1,0 +1,26 @@
+<ion-header color="greenUp">
+  <ion-navbar>
+    <ion-title><h2 style="font-weight: 100; font-size: 1.2em;">Locknut | {{form.title}}</h2></ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-list>
+    <ion-item><h4>Codigo: {{autoTemp.codigo}}</h4></ion-item>
+    <ion-item>
+        <ion-label floating>Marca</ion-label>
+        <ion-input type="text" [(ngModel)]="autoTemp.marca"></ion-input>
+    </ion-item>
+    <ion-item>
+        <ion-label floating>Modelo</ion-label>
+        <ion-input [(ngModel)]="autoTemp.modelo"></ion-input>
+    </ion-item>
+    <ion-item>
+        <ion-label floating>Año</ion-label>
+        <ion-datetime displayFormat="YYYY"  [(ngModel)]="autoTemp.anio"></ion-datetime>
+    </ion-item>
+    <ion-item>
+        <button type="button" ion-button large color="primary" >{{form.textButton}}</button>
+    </ion-item>
+  </ion-list>
+</ion-content>

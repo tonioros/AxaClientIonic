@@ -1,11 +1,15 @@
 import { Component, ViewChild } from '@angular/core';
-import { Nav, Platform } from 'ionic-angular';
+import { Nav, Platform,MenuController } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
 import { HomePage } from '../pages/home/home';
-import { ListPage } from '../pages/list/list';
-
+import { LoginPage } from "../pages/login/login";
+import { HomeClientePage } from "../pages/home-cliente/home-cliente";
+import { AutosPage } from "../pages/autos/autos";
+import { HistorialPage } from "../pages/historial/historial";
+import { PerfilPage } from "../pages/perfil/perfil";
+ 
 @Component({
   templateUrl: 'app.html'
 })
@@ -14,19 +18,34 @@ export class MyApp {
 
   rootPage: any = HomePage;
 
-  pages: Array<{title: string, component: any}>;
+  pagesForInit: Array<{title: string, component: any, icon:string}>;
+  pagesForLog: Array<{title: string, component: any, icon:string}>;
+  stateNav = (localStorage.getItem("UDI") == null);
 
-  constructor(public platform: Platform, public statusBar: StatusBar, public splashScreen: SplashScreen) {
+  constructor(public menuCtrl: MenuController,public platform: Platform, public statusBar: StatusBar, public splashScreen: SplashScreen) {
     this.initializeApp();
-
+   // this.menuCtrl.enable(true, "unauthenticated");
+    //this.menuCtrl.enable(false, "authenticated")
     // used for an example of ngFor and navigation
-    this.pages = [
-      { title: 'Home', component: HomePage },
-      { title: 'List', component: ListPage }
+    this.pagesForInit = [
+      { title: 'Inicio', component: HomePage, icon:"home" },
+      { title: 'Iniciar Sesion', component: LoginPage, icon:"lock" } 
     ];
 
-  }
+    this.pagesForLog =[
+      {title:"Inicio",component: HomeClientePage, icon:"home"},
+      {title:"Perfil",component: PerfilPage, icon:"person"},
+      {title:"Mis Autos",component: AutosPage, icon:"car"},
+      {title:"Servicios Realizados",component: HistorialPage, icon:"hammer"}
+    ]
 
+  } 
+
+  ionDrag() {
+   this.stateNav = (localStorage.getItem("UDI") == null);
+    console.log(this.stateNav);
+    
+  }
   initializeApp() {
     this.platform.ready().then(() => {
       // Okay, so the platform is ready and our plugins are available.

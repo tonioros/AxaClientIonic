@@ -1,0 +1,41 @@
+<ion-header class="nav-bar">
+  <ion-navbar>
+    <button ion-button menuToggle >
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title><h2 style="font-weight: 100; font-size: 1.2em;">Locknut | Perfil</h2></ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-list>
+    <h2>Codigo: {{userData.codigo}} | Empresa: {{userData.nombreEmpresa}}</h2>
+    <ion-item>
+      <ion-label floating>Nombre</ion-label>
+      <ion-input [(ngModel)]="userData.nombre" name="Nombre" type="text"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label floating>Edad</ion-label>
+      <ion-input [(ngModel)]="userData.edad" name="Edad" type="number"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label floating>Correo</ion-label>
+      <ion-input [(ngModel)]="userData.correo" name="Correo" type="email"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label floating>Contraseña</ion-label>
+      <ion-input [(ngModel)]="userData.contrasena" name="Contraseña" type="password"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label floating>Repetir Contraseña</ion-label>
+      <ion-input [(ngModel)]="userData.contrasena2" name="Contraseña2" type="password"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Foto</ion-label>
+      <ion-input type="file" (change)="cargarIMG($event)"></ion-input>
+    </ion-item>
+    <ion-item>
+      <img padding src="{{userData.urlIMG}}"  />
+    </ion-item>
+  </ion-list>
+</ion-content>

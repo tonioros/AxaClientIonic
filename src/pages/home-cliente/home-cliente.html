@@ -1,0 +1,63 @@
+<ion-header class="nav-bar">
+  <ion-navbar>
+    <button ion-button menuToggle >
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title><h2 style="font-weight: 100; font-size: 1.2em;">Locknut | Inicio</h2></ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content style="background: #f8f8f8;" padding>
+  <ion-card color="greenFlat">
+    <ion-card-header  ><h2 padding text-wrap text-center style="font-weight: 100; font-size: 1.5em;">Hola, {{usuario.nombre}} aca te mostramos un breve resumen de tu actividad</h2></ion-card-header>
+    <ion-card-content text-center><p>AXA Control | Locknut</p></ion-card-content>
+  </ion-card>
+  <div padding class="home-user-div" (click)="RedirectTo('serviciosProx')" >
+    <h2>Tus Proximos Servicios</h2>
+    <ion-list inset>
+          <h4 ion-item>6</h4>
+          <h4 ion-item>6</h4>
+          <h4 ion-item>6</h4>
+          <h4 ion-item>6</h4>
+          <h4 ion-item>6</h4>
+    </ion-list>
+  </div>
+  <div padding class="home-user-div" (click)="RedirectTo('antiguosSer')" >
+    <h2>Tus Servicios Realizados</h2>
+    <ion-list inset>
+          <h4 ion-item>6</h4>
+          <h4 ion-item>6</h4>
+          <h4 ion-item>6</h4>
+          <h4 ion-item>6</h4>
+          <h4 ion-item>6</h4>
+    </ion-list>
+  </div>
+  <div padding class="home-user-div" (click)="RedirectTo('autos')" >
+    <h2>Tus Autos</h2>
+    <ion-list inset>
+          <h4 ion-item>6</h4>
+          <h4 ion-item>6</h4>
+          <h4 ion-item>6</h4>
+          <h4 ion-item>6</h4>
+          <h4 ion-item>6</h4>
+    </ion-list>
+  </div>
+  <div padding class="home-user-div" (click)="RedirectTo('autos')" >
+    <h2>Tus Autos</h2>
+    <ion-list inset>
+          <h4 ion-item>6</h4>
+          <h4 ion-item>6</h4>
+          <h4 ion-item>6</h4>
+          <h4 ion-item>6</h4>
+          <h4 ion-item>6</h4>
+    </ion-list>
+  </div>
+  <ion-card padding (click)="RedirectTo('perfil')">
+    <ion-card-header>
+    <img style="border-radius: 100px" src="{{usuario.urlIMG}}" alt="Imagen de Usuario" />
+    </ion-card-header>
+    <ion-card-content >
+      <h2 text-center color="primary" >Tu Perfil</h2>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

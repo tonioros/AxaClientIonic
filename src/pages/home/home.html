@@ -1,13 +1,80 @@
-<ion-header color="transparent">
+<ion-header class="nav-bar">
   <ion-navbar>
     <button ion-button menuToggle >
       <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-title >AXA Control</ion-title>
+    <ion-title><h2 style="font-weight: 100; font-size: 1.2em;">Locknut</h2></ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding color="grayFlat">
-  <h3>Ionic Menu Starter</h3>
-  <button ion-button secondary menuToggle>Toggle Menu</button>
+  <div class="auto-img">
+    <h2>AXA Control Services</h2>
+    <p>Un servicio pensado en tu tranquilidad</p>
+  </div>
+
+  <ion-card>
+    <ion-card-header text-wrap>
+      Locknut es la aplicacion para AXA Control, con ella tendras tendras
+    </ion-card-header>
+    <ion-card-content>
+      <ion-list>
+        <h4 ion-item text-wrap ><ion-icon name="logo-buffer"></ion-icon> Mejor control en tus servicios</h4>
+        <h4 ion-item text-wrap ><ion-icon ios="ios-contacts" md="md-contacts"></ion-icon> Comentarios de cada mecanico que te atencio</h4>
+        <h4 ion-item text-wrap ><ion-icon ios="ios-car" md="md-car"></ion-icon> Control sobre lo realizado a tu auto</h4>
+        <h4 ion-item text-wrap ><ion-icon ios="ios-create" md="md-create"></ion-icon> Historial detallado de tus servicios</h4>
+        <h4 ion-item text-wrap ><ion-icon ios="ios-calendar" md="md-calendar"></ion-icon> Agendacion de nuevos servicios</h4>
+        <h4 ion-item text-wrap ><ion-icon ios="ios-construct" md="md-construct"></ion-icon> Contacto con tu mecanico</h4>
+      </ion-list>
+    </ion-card-content>
+  </ion-card>
+
+<ion-card>
+  <img src="../../assets/notas.jpg"/>
+  <ion-card-content>
+     <ion-card-title style="font-weight: 100;" text-center>
+     SEGURIDAD
+      </ion-card-title>
+    <h2 text-wrap>Usando nuestra aplicacion podras ver completamente los cambios que se haran en tu automovil, ya que en cada servicio se dara un detalle sobre los cobros que se haran</h2>
+    <hr/>
+  </ion-card-content>
+</ion-card>
+<ion-card>
+  <img src="../../assets/car.jpg"/>
+  <ion-card-content>
+     <ion-card-title style="font-weight: 100;" text-center>
+     TODO EN UNO
+      </ion-card-title>
+    <h2 text-wrap>Todos tus servicios en una sola aplicacion, todas tus mecanicas en tu mismo telefono, servicio centralizado para ahorra tiempo en cada una</h2>
+    <hr/>
+  </ion-card-content>
+</ion-card>
+
+<ion-card>
+    <ion-card-title style="font-weight: 100;" text-center>
+     ¿Convencido?
+      </ion-card-title>
+    <ion-card-content>
+      <h3 text-center>Anda</h3>
+        <ion-row no-padding>
+          <ion-col text-center>
+            <button ion-button clear block color="primary" icon-start>
+              <ion-icon ios="ios-person-add-outline" md="md-person-add"></ion-icon>
+              ¡Registrate aca!
+            </button>
+          </ion-col>
+        </ion-row>
+        <h3 text-center>¿Ya tienes cuenta?</h3>
+        <ion-row no-padding>
+          <ion-col text-center>
+            <button ion-button clear block color="greenFlat" icon-start>
+             <ion-icon ios="ios-lock" md="md-lock"></ion-icon>
+              ¡Inicia Sesion!
+            </button>
+          </ion-col>
+        </ion-row>
+    </ion-card-content>
+  </ion-card>
+
 </ion-content>
+

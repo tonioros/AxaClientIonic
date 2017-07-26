@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
+import { NavController,MenuController } from 'ionic-angular';
+import { HomeClientePage } from "../home-cliente/home-cliente";
 
 @Component({
   selector: 'page-home',
@@ -7,8 +8,12 @@ import { NavController } from 'ionic-angular';
 })
 export class HomePage {
 
-  constructor(public navCtrl: NavController) {
-
+  constructor(public menuCtrl:MenuController,public navCtrl: NavController) {
+    if(localStorage.getItem("UDI") != null){
+      this.menuCtrl.enable(false, 'unauthenticated');
+      this.menuCtrl.enable(true, 'authenticated');
+      this.navCtrl.setRoot(HomeClientePage); 
+    }
   }
 
 }

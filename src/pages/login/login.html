@@ -1,0 +1,26 @@
+<ion-header class="nav-bar">
+  <ion-navbar>
+    <button ion-button menuToggle >
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title><h2 style="font-weight: 100; font-size: 1.2em;">Locknut | Iniciar Sesion</h2></ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content padding>
+  <ion-item>
+    <img width="500" src="../../assets/favicon.png" style="padding: 5% 15%" />
+  </ion-item>
+  <ion-list>
+    <ion-item>
+      <ion-label floating>Correo o Codigo</ion-label>
+      <ion-input [(ngModel)]="dataUser.nick" type="text"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label floating>Contraseña</ion-label>
+      <ion-input [(ngModel)]="dataUser.contrasena" type="password"></ion-input>
+    </ion-item>
+  </ion-list>
+  <ion-item>
+    <button ion-button block outline medium (click)="iniciarS()" color="primary">Iniciar Sesion</button><ion-icon color="greenFlat"  *ngIf="dataUser.state" ios="ios-refresh" md="md-refresh"></ion-icon>
+  </ion-item>
+</ion-content>

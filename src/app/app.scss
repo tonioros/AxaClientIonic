@@ -14,3 +14,28 @@
 // To declare rules for a specific mode, create a child rule
 // for the .md, .ios, or .wp mode classes. The mode class is
 // automatically applied to the <body> element in the app.
+.nav-bar{
+    box-shadow: 2px 9px 87px -23px rgba(0,0,0,0.75);
+    background: rgba(255,225,225,.10) !important; /* or transparent, or background:none */
+    font-weight: 100;
+}
+
+.auto-img{
+    background: url('../../assets/header.png');
+    padding: 15% 15px;
+    background-position: initial;
+    background-size: cover;
+    color: #fff;
+    text-align: center;
+    font-weight: 300;
+    box-shadow: 2px 9px 87px -25px rgba(0,0,0,0.75);
+}
+
+.home-user-div{
+    border: none;
+    border-bottom: solid 2px #828282;
+    margin: 10px 5px;
+}
+.home-user-div h2{
+    color: map-get($colors, purpleUp);
+}
