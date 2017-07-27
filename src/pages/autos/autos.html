@@ -11,16 +11,24 @@
   <ion-list>
     <ion-item>
       <ion-card padding *ngFor="let auto of _autos.listAuto" (click)="toForm(auto.idAuto)">
-        <ion-card-header margin>
-          <h2 text-wrap>{{auto.marca+" "+auto.modelo+" "+auto.anio}}</h2>
+        <ion-card-header>
+          <ion-row>
+            <ion-col>
+            <h2 text-wrap>{{auto.marca+" "+auto.modelo+" "+auto.anio}}</h2>
+            </ion-col>
+            <ion-col col-2 >
+            <button ion-button color="danger" (click)="eliminar(auto.marca+' '+auto.modelo, auto.idAuto)" clear icon-only><ion-icon name="trash"></ion-icon></button>
+            </ion-col>
+          </ion-row>
         </ion-card-header>
-        <ion-card-content margin text-wrap>
-          <p>Codigo de Auto: {{auto.codigo}} | Agregado: {{auto.fechaCreacion}}</p>
+        <ion-card-content text-wrap>
+          <h3>Codigo de Auto: {{auto.codigo}}</h3>
+          <h3>Agregado: {{auto.fechaCreacion}}</h3>
         </ion-card-content>
       </ion-card>
     </ion-item>
   </ion-list>
-<ion-fab>
-  <button ion-fab color="primary" fab-md-box-shadow bottom right (click)="toForm('AG')"><ion-icon ios="ios-add" md="md-add"></ion-icon></button>
+<ion-fab bottom right>
+  <button ion-fab color="primary" fab-md-box-shadow (click)="toForm('AG')"><ion-icon ios="ios-add" md="md-add"></ion-icon></button>
 </ion-fab>
 </ion-content>

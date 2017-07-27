@@ -1,24 +1,26 @@
 import { Component } from '@angular/core';
-import { NavController, NavParams } from 'ionic-angular';
-
-/**
- * Generated class for the HistorialPage page.
- *
- * See http://ionicframework.com/docs/components/#navigation for more info
- * on Ionic pages and navigation.
- */
-
+import { NavController,ViewController, NavParams, ModalController } from 'ionic-angular';
+import { ServicioService } from "../../app/Services/servicios.service";
+import { DetalleHistorialPage } from "./detalle-historial";
 @Component({
   selector: 'page-historial',
   templateUrl: 'historial.html',
 })
 export class HistorialPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public viewCtrl: ViewController,public modalCtrl:ModalController,public servicio:ServicioService,public navCtrl: NavController, public navParams: NavParams) {
   }
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad HistorialPage');
+  ionViewWillEnter() {
+    this.servicio.getFactura().subscribe()
+    this.servicio.getServicio().subscribe()
+  }
+  cerrar(){
+    this.viewCtrl.dismiss();
+  }
+  detalles(ID:any){
+    let modal = this.modalCtrl.create(DetalleHistorialPage,{ID});
+    modal.present();
   }
 
 }

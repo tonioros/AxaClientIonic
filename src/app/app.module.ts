@@ -10,6 +10,7 @@ import { HomeClientePage } from "../pages/home-cliente/home-cliente";
 import { FormAutosPage } from "../pages/autos/form-auto";
 import { AutosPage } from "../pages/autos/autos";
 import { HistorialPage } from "../pages/historial/historial";
+import { DetalleHistorialPage } from "../pages/historial/detalle-historial";
 import { PerfilPage } from "../pages/perfil/perfil";
 //Hasta donde entiendo esa para graficos v':
 import { StatusBar } from '@ionic-native/status-bar';
@@ -17,6 +18,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 //Servicios para conexion con WEB SERVICES
 import { UsuarioService } from "./Services/usuario.service";
 import { AutoService } from "./Services/auto.service";
+import { ServicioService } from "./Services/servicios.service";
 //Modulos extras para el funcionamiento
 import { HttpModule } from '@angular/http';
 import { File as FilePro } from "@ionic-native/file";
@@ -26,6 +28,7 @@ import { File as FilePro } from "@ionic-native/file";
     MyApp,
     HomePage,
     LoginPage,
+    DetalleHistorialPage,
     HistorialPage,
     HomeClientePage,
     AutosPage,
@@ -43,6 +46,7 @@ import { File as FilePro } from "@ionic-native/file";
     HomePage,
     LoginPage,
     HistorialPage,
+    DetalleHistorialPage,
     HomeClientePage,
     FormAutosPage,
     AutosPage,
@@ -52,6 +56,7 @@ import { File as FilePro } from "@ionic-native/file";
     StatusBar,
     FilePro,
     SplashScreen,
+    ServicioService,
     UsuarioService,
     AutoService,
     {provide: ErrorHandler, useClass: IonicErrorHandler}

@@ -22,6 +22,8 @@ export class AutoService {
     insertAuto(data:any,callback){
         this._http.post(this.uri, data).toPromise()
         .then(res=>{
+            console.log(res.json());
+            
             callback(res.json().Mensaje)
         })
         .catch(res=>{
@@ -31,6 +33,7 @@ export class AutoService {
     updateAuto(data:any,callback){
         this._http.put(this.uri+data.idAuto, data).toPromise()
         .then(res=>{
+            console.log(res.json());
             callback(res.json().Mensaje)
         })
         .catch(res=>{
@@ -40,6 +43,7 @@ export class AutoService {
     deleteAuto(data:any,callback){
         this._http.delete(this.uri+data.idAuto, data).toPromise()
         .then(res=>{
+            console.log(res.json());
             callback(res.json().Mensaje)
         })
         .catch(res=>{

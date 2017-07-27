@@ -22,6 +22,7 @@ export class LoginPage {
           localStorage.setItem("UDI", res.usuario.idUsuario)
           localStorage.setItem("UNA", res.usuario.nombre)
           localStorage.setItem("UCO", res.usuario.correo)
+          localStorage.setItem("UDE", res.usuario.idEmpresa)
           localStorage.setItem("UROi", res.usuario.idTipoUsuario)
           localStorage.setItem("URLI", res.usuario.urlIMG)
           this.menuCtrl.enable(false, 'unauthenticated');

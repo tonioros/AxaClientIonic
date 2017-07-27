@@ -20,7 +20,7 @@
         <ion-datetime displayFormat="YYYY"  [(ngModel)]="autoTemp.anio"></ion-datetime>
     </ion-item>
     <ion-item>
-        <button type="button" ion-button large color="primary" >{{form.textButton}}</button>
+        <button type="button" ion-button large color="primary" (click)="sendData()" >{{form.textButton}}</button>
     </ion-item>
   </ion-list>
 </ion-content>

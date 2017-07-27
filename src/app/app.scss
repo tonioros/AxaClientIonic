@@ -39,3 +39,11 @@
 .home-user-div h2{
     color: map-get($colors, purpleUp);
 }
+
+.text-div{
+    background: map-get($colors, purpleUp);
+    font-weight: 200;
+    color:#fff ;
+    border-radius: 4px;
+    box-shadow: 2px 9px 87px -25px rgba(0,0,0,0.75);
+}
