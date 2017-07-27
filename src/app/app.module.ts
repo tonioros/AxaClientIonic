@@ -13,6 +13,7 @@ import { HistorialPage } from "../pages/historial/historial";
 import { DetalleHistorialPage } from "../pages/historial/detalle-historial";
 import { PerfilPage } from "../pages/perfil/perfil";
 import { ProxServiciosPage } from "../pages/prox-servicios/prox-servicios";
+import { ProxServiciosFormSerPage } from "../pages/prox-servicios/prox-servicios-form-ser";
 //Hasta donde entiendo esa para graficos v':
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -32,6 +33,7 @@ import { File as FilePro } from "@ionic-native/file";
     LoginPage,
     HistorialPage,
     DetalleHistorialPage,
+    ProxServiciosFormSerPage,
     ProxServiciosPage,
     HomeClientePage,
     FormAutosPage,
@@ -50,6 +52,7 @@ import { File as FilePro } from "@ionic-native/file";
     LoginPage,
     HistorialPage,
     DetalleHistorialPage,
+    ProxServiciosFormSerPage,
     ProxServiciosPage,
     HomeClientePage,
     FormAutosPage,

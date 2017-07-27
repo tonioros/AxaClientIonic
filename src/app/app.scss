@@ -47,3 +47,7 @@
     border-radius: 4px;
     box-shadow: 2px 9px 87px -25px rgba(0,0,0,0.75);
 }
+.prox-events{
+    background: map-get($colors , primary );
+    color: #fff
+}

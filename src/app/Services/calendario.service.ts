@@ -16,7 +16,7 @@ export class CalendarioService {
     insertServicioProx(data, callback){
         this.http.post("http://axaws.herokuapp.com/api/Calendario", data).toPromise()
         .then(res=>{
-            callback(res.json())
+            callback(res.json().Mensaje)
         })
         .catch(res=> {
             console.log(res);

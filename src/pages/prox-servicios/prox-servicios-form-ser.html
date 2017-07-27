@@ -1,0 +1,32 @@
+<ion-header class="nav-bar">
+  <ion-navbar>
+    <ion-title><h2 style="font-weight: 100; font-size: 1.2em;">Calendario</h2></ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-list>
+    <ion-item>
+      <ion-label floating>Fecha</ion-label>
+      <ion-datetime [(ngModel)]="calendarioTemp.date" displayFormat="DDD/MMM/YY" ></ion-datetime>
+    </ion-item>
+    <ion-item>
+      <ion-label floating>Hora</ion-label>
+      <ion-datetime [(ngModel)]="calendarioTemp.time" displayFormat="HH/mm" ></ion-datetime>
+    </ion-item>
+    <ion-item>
+      <ion-label floating>Auto</ion-label>
+      <ion-select [(ngModel)]="calendarioTemp.idAuto" >
+        <ion-option value="{{auto.idAuto}}" *ngFor="let auto of _auto.listAuto">{{auto.marca+" "+auto.modelo}}</ion-option>
+      </ion-select>
+    </ion-item>
+    <ion-item>
+      <ion-label floating>Descripcion</ion-label>
+      <ion-textarea [(ngModel)]="calendarioTemp.descripcion"></ion-textarea>
+    </ion-item>
+    <ion-item>
+      <button type="button" ion-button (click)="agregar()" large block primary>Agregar</button>
+    </ion-item>
+    
+  </ion-list>
+</ion-content>

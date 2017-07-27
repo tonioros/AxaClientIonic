@@ -57,7 +57,7 @@ export class FormAutosPage {
     }
     showToast(mensaje){
     let toast = this.toastCtrl.create({
-        message: mensaje,
+        message: "Se calendarizo el servicio",
         duration: 3000,
         position: "top"        
     });
