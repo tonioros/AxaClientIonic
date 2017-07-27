@@ -31,6 +31,9 @@
       <ion-input [(ngModel)]="userData.contrasena2" name="Contraseña2" type="password"></ion-input>
     </ion-item>
     <ion-item>
+      <button type="button" block greenUp (click)="enviar()">Guardar Cambios</button>
+    </ion-item>
+    <ion-item>
       <ion-label>Foto</ion-label>
       <ion-input type="file" (change)="cargarIMG($event)"></ion-input>
     </ion-item>

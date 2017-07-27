@@ -9,6 +9,7 @@ import { HomeClientePage } from "../pages/home-cliente/home-cliente";
 import { AutosPage } from "../pages/autos/autos";
 import { HistorialPage } from "../pages/historial/historial";
 import { PerfilPage } from "../pages/perfil/perfil";
+import { ProxServiciosPage } from "../pages/prox-servicios/prox-servicios";
  
 @Component({
   templateUrl: 'app.html'
@@ -36,7 +37,8 @@ export class MyApp {
       {title:"Inicio",component: HomeClientePage, icon:"home"},
       {title:"Perfil",component: PerfilPage, icon:"person"},
       {title:"Mis Autos",component: AutosPage, icon:"car"},
-      {title:"Servicios Realizados",component: HistorialPage, icon:"hammer"}
+      {title:"Servicios Realizados",component: HistorialPage, icon:"hammer"},
+      {title:"Proximos Servicios",component: ProxServiciosPage, icon:"calendar"}
     ]
 
   } 

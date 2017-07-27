@@ -12,6 +12,7 @@ import { AutosPage } from "../pages/autos/autos";
 import { HistorialPage } from "../pages/historial/historial";
 import { DetalleHistorialPage } from "../pages/historial/detalle-historial";
 import { PerfilPage } from "../pages/perfil/perfil";
+import { ProxServiciosPage } from "../pages/prox-servicios/prox-servicios";
 //Hasta donde entiendo esa para graficos v':
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -19,6 +20,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { UsuarioService } from "./Services/usuario.service";
 import { AutoService } from "./Services/auto.service";
 import { ServicioService } from "./Services/servicios.service";
+import { CalendarioService } from "./Services/calendario.service";
 //Modulos extras para el funcionamiento
 import { HttpModule } from '@angular/http';
 import { File as FilePro } from "@ionic-native/file";
@@ -28,12 +30,13 @@ import { File as FilePro } from "@ionic-native/file";
     MyApp,
     HomePage,
     LoginPage,
-    DetalleHistorialPage,
     HistorialPage,
+    DetalleHistorialPage,
+    ProxServiciosPage,
     HomeClientePage,
+    FormAutosPage,
     AutosPage,
-    PerfilPage,
-    FormAutosPage
+    PerfilPage
   ],
   imports: [
     BrowserModule,
@@ -47,6 +50,7 @@ import { File as FilePro } from "@ionic-native/file";
     LoginPage,
     HistorialPage,
     DetalleHistorialPage,
+    ProxServiciosPage,
     HomeClientePage,
     FormAutosPage,
     AutosPage,
@@ -57,6 +61,7 @@ import { File as FilePro } from "@ionic-native/file";
     FilePro,
     SplashScreen,
     ServicioService,
+    CalendarioService,
     UsuarioService,
     AutoService,
     {provide: ErrorHandler, useClass: IonicErrorHandler}

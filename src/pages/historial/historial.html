@@ -10,8 +10,8 @@
 <ion-content>
   <h2 text-center margin padding text-wrap class="text-div">Servicios Finalizados | Facturas</h2>
   <ion-list>
-    <ion-item>
-      <ion-card *ngFor="let serv of servicio.listFactura" (click)="detalles(serv.idServicio)">
+    <ion-item *ngFor="let serv of servicio.listFactura" (click)="detalles(serv.idServicio)">
+      <ion-card >
         <ion-card-header text-wrap text-center>
           Servicio Hecho al Auto: {{serv.marca +" "+serv.modelo+" "+serv.anio}}
         </ion-card-header>

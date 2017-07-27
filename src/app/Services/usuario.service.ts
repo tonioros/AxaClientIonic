@@ -1,8 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Http } from '@angular/http';
 import 'rxjs/add/operator/map';
-import { AlertController } from 'ionic-angular';
-import 'rxjs/add/operator/catch';
 import 'rxjs/add/operator/toPromise';
 //import { File } from "@ionic-native/file";
  
@@ -10,7 +8,7 @@ import 'rxjs/add/operator/toPromise';
 export class UsuarioService {
     private uri:string = "https://axaws.herokuapp.com/"
     private userData:any;
-    constructor(private _http: Http, private alert:AlertController) {
+    constructor(private _http: Http) {
        /* this._file.checkFile(this._file.dataDirectory, "dataLOK.lk")
         .then(_=>{
             this._file.readAsText(this._file.dataDirectory, "dataLOK.lk").then(data=>{this.userData = JSON.parse(data)})
@@ -41,7 +39,7 @@ export class UsuarioService {
         })
     }
      public Update(contrasena:string, nombre:string, correo:string, edad:string, urlIMG:string, callback){
-        this._http.put(this.uri+"api/Usuario"+this.userData.idUsuario,{idUsuario: this.userData.idUsuario,contrasena:contrasena,nombre:nombre, edad:edad, correo: correo, urlIMG:urlIMG}).toPromise()
+        this._http.put(this.uri+"api/Usuario/"+localStorage.getItem("UDI"),{idUsuario: localStorage.getItem("UDI"),contrasena:contrasena,nombre:nombre, edad:edad, correo: correo, urlIMG:urlIMG}).toPromise()
         .then(res=>{
             //this.CheckData()
             callback(res.json())
@@ -62,6 +60,17 @@ export class UsuarioService {
         this.userData = {}
         //this.CheckData()
     }
+    public SubirImagen(file:any, callback){
+        var dataIMG= new FormData();
+        dataIMG.append("file", file, file.name)
+        this._http.post("https://axaws.herokuapp.com/upload", dataIMG).toPromise()
+        .then(res=>{
+            callback(res.json())
+        }).catch(res=>{
+            console.log(res);
+        })
+    }
+
     /*
     public CheckData(){
         if(!this.GuardarDatos()){

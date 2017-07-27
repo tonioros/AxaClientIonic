@@ -1,0 +1,30 @@
+<ion-header class="nav-bar">
+  <ion-navbar>
+    <button ion-button menuToggle >
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title><h2 style="font-weight: 100; font-size: 1.2em;">Locknut | Proximos Servicios</h2></ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item *ngFor="let ca of calendario.listCalendario">
+      <ion-card padding>
+        <ion-card-header>
+          <h2 >Servicio para: {{ca.marca+" "+ca.modelo+" "+ca.anio}}</h2>
+          <h4>Fecha: {{ca.fechaFormat}}</h4>
+          <h4>Hora: {{ca.horaFormat}}</h4>
+        </ion-card-header>
+        <ion-card-content>
+          <h3>
+            Descripcion: {{ca.descripcion}}
+          </h3>
+           <h4>
+            En taller: {{ca.nombre}}
+          </h4>
+        </ion-card-content>
+      </ion-card>
+    </ion-item>
+  </ion-list>
+</ion-content>
