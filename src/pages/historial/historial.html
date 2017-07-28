@@ -24,7 +24,7 @@
 <h2 text-center margin padding text-wrap class="text-div">Servicios sin finalizar</h2>
   <ion-list>
     <ion-item>
-      <ion-card *ngFor="let serv of servicio.listServicios" (click)="detalles(serv.idServicio)">
+      <ion-card *ngFor="let serv of servicio.listServicios" (click)="detalles(serv.idServicio, 'SF')">
         <ion-card-header text-wrap text-center>
           Servicio Hecho al Auto: {{serv.marca +" "+serv.modelo+" "+serv.anio}}
         </ion-card-header>

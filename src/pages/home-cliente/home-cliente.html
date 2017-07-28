@@ -15,41 +15,19 @@
   <div padding class="home-user-div" (click)="RedirectTo('serviciosProx')" >
     <h2>Tus Proximos Servicios</h2>
     <ion-list inset>
-          <h4 ion-item>6</h4>
-          <h4 ion-item>6</h4>
-          <h4 ion-item>6</h4>
-          <h4 ion-item>6</h4>
-          <h4 ion-item>6</h4>
+          <h4 ion-item *ngFor="let ca of _calendario.listCalendario.slice(0,6)">Servicio a realizarse el: {{ca.fechaFormat}}</h4>
     </ion-list>
   </div>
   <div padding class="home-user-div" (click)="RedirectTo('antiguosSer')" >
     <h2>Tus Servicios Realizados</h2>
     <ion-list inset>
-          <h4 ion-item>6</h4>
-          <h4 ion-item>6</h4>
-          <h4 ion-item>6</h4>
-          <h4 ion-item>6</h4>
-          <h4 ion-item>6</h4>
+          <h4 ion-item *ngFor="let ser of _servicios.listServicios.slice(0,6)">Servicio realizado el: {{ser.fechaFormat}}</h4>
     </ion-list>
   </div>
   <div padding class="home-user-div" (click)="RedirectTo('autos')" >
     <h2>Tus Autos</h2>
     <ion-list inset>
-          <h4 ion-item>6</h4>
-          <h4 ion-item>6</h4>
-          <h4 ion-item>6</h4>
-          <h4 ion-item>6</h4>
-          <h4 ion-item>6</h4>
-    </ion-list>
-  </div>
-  <div padding class="home-user-div" (click)="RedirectTo('autos')" >
-    <h2>Tus Autos</h2>
-    <ion-list inset>
-          <h4 ion-item>6</h4>
-          <h4 ion-item>6</h4>
-          <h4 ion-item>6</h4>
-          <h4 ion-item>6</h4>
-          <h4 ion-item>6</h4>
+          <h4 ion-item *ngFor="let au of _auto.listAuto.slice(0,6)">{{au.marca+" "+au.modelo+" "+au.anio}}</h4>
     </ion-list>
   </div>
   <ion-card padding (click)="RedirectTo('perfil')">

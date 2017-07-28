@@ -3,7 +3,7 @@
     <button ion-button menuToggle >
       <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-title><h2 style="font-weight: 100; font-size: 1.2em;">Locknut | Proximos Servicios</h2></ion-title>
+    <ion-title><h2 style="font-weight: 100; font-size: 1.1em;">Locknut | Proximos Servicios</h2></ion-title>
   </ion-navbar>
 </ion-header>
 
@@ -11,18 +11,16 @@
 
   <ion-list>
 
-    <ion-item style="border-bottom: solid 1.5px #e3e3e3; box-shadow: 0px 0px 197px -30px rgba(0,0,0,0.75);" *ngFor="let ca of calendario.listCalendario">
-      <ion-card>
+    <ion-item >
+      <ion-card (click)="toDetalle(ca)" style="border-bottom: solid 1.5px #e3e3e3; box-shadow: 0px 0px 197px -30px rgba(0,0,0,0.75);" *ngFor="let ca of calendario.listCalendario">
           <ion-row>
-            <ion-col col-2 class="prox-events">
+            <ion-col col-2 color="white" class="prox-events">
               <h2 text-center>Hora</h2>
               <h2 text-center><b>{{ca.horaFormat}}</b></h2>
             </ion-col>
             <ion-col col-10>
               <h3>Servicio para: {{ca.marca+" "+ca.modelo+" "+ca.anio}}</h3>
               <h4><b>{{ca.fechaFormat}}</b></h4>
-              <h4>En taller: <b>{{ca.nombre}}</b></h4>
-              <h4>Descripcion: {{ca.descripcion}}</h4>
             </ion-col>
           </ion-row>
       </ion-card>

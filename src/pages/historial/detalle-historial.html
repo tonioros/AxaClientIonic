@@ -14,10 +14,34 @@
 
 <ion-content>
     <ion-list>
-    <ion-item *ngFor="let data of dataList">
-        <h3>Descripcion: {{data.descripcion}}</h3>
-        <h3>SubTotal: {{data.subtotal}}</h3>
-    </ion-item>
-  </ion-list>
-
+      <ion-item *ngFor="let data of dataList">
+        <h2>Descripcion: {{data.descripcion}}</h2>
+        <h2>SubTotal: {{data.subtotal}}</h2>
+      </ion-item>
+    </ion-list>
+  <!-- Area para comentarios -->
+    <h3 block text-center margin padding text-wrap class="text-div">Comentarios</h3>
+    <ion-list>
+      <ion-item *ngFor="let comen of comentariosList">
+        <ion-card block>
+          <ion-row>
+            <ion-col >
+              <h3 text-wrap>Comentario: {{comen.descripcion}}</h3>
+            </ion-col>
+            <ion-col col-2>
+              <button ion-button color="danger" (click)="eliminar(comen.idComentarioS)" clear icon-only><ion-icon name="trash"></ion-icon></button>
+            </ion-col>
+          </ion-row>
+        </ion-card>
+      </ion-item>
+    </ion-list>
+    <ion-list *ngIf="comentarios">
+      <ion-item>
+        <ion-label floating>Nuevo Comentario</ion-label>
+        <ion-textarea [(ngModel)]="comentarioTemp.descripcion" type="text"></ion-textarea>
+      </ion-item>
+      <ion-item>
+        <button ion-button block primary (click)="agregar()">Agregar</button>
+      </ion-item>
+    </ion-list>
 </ion-content>

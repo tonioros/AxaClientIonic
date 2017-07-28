@@ -18,9 +18,14 @@ export class HistorialPage {
   cerrar(){
     this.viewCtrl.dismiss();
   }
-  detalles(ID:any){
-    let modal = this.modalCtrl.create(DetalleHistorialPage,{ID});
-    modal.present();
+  detalles(ID:any, fin?:string){
+    if(fin != null){
+      let modal = this.modalCtrl.create(DetalleHistorialPage,{ID, fin});
+      modal.present();
+    }else{
+      let modal = this.modalCtrl.create(DetalleHistorialPage,{ID});
+      modal.present();
+    }
   }
 
 }

@@ -1,0 +1,20 @@
+<ion-header class="nav-bar">
+  <ion-navbar>
+    <button ion-button menuToggle >
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title><h2 style="font-weight: 100; font-size: 1.2em;">Locknut | Mecanicos</h2></ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item *ngFor="let mec of _mecanico.listMecanicos" (click)="detalles(mec.idUsuario)">
+      <ion-avatar item-start>
+        <img src="{{mec.urlIMG}}">
+      </ion-avatar>
+      <h2>{{mec.nombre}}</h2>
+      <p>Taller: {{mec.nombreEmpresa}} |  codigo: {{mec.codigo}}</p>
+    </ion-item>
+  </ion-list>
+</ion-content>

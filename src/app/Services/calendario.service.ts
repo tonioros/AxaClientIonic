@@ -14,7 +14,7 @@ export class CalendarioService {
       return this.http.get("http://axaws.herokuapp.com/api/Cal/"+ID).map(res=>this.listCalendario = res.json())
     }
     insertServicioProx(data, callback){
-        this.http.post("http://axaws.herokuapp.com/api/Calendario", data).toPromise()
+        this.http.post("https://axaws.herokuapp.com/api/Calendario", data).toPromise()
         .then(res=>{
             callback(res.json().Mensaje)
         })
@@ -25,7 +25,7 @@ export class CalendarioService {
     }
 
     deleteServicioProx(ID, callback){
-        this.http.delete("http://axaws.herokuapp.com/Cal/"+ID).toPromise()
+        this.http.delete("http://axaws.herokuapp.com/api/Cal/"+ID).toPromise()
         .then(res=>{
             callback(res.json())
         })

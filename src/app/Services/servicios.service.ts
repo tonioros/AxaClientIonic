@@ -27,6 +27,35 @@ export class ServicioService {
             console.log(res);    
         })
     }
+    getComentarios(IdServicio:string, callback){
+        this.http.get("https://axaws.herokuapp.com/api/cs/serv/"+IdServicio).toPromise()
+        .then(res=>{
+            callback(res.json())
+        })
+        .catch(res=>{
+            console.log(res);    
+        })
+    }
+    insertComentario(data, callback){
+        this.http.post("https://axaws.herokuapp.com/api/cs/", data).toPromise()
+        .then(res=>{
+            callback(res.json().Mensaje)
+        })
+        .catch(res=>{
+            console.log(res);    
+            callback(false)
+        })
+    }
+    deleteComentario(id, callback){
+        this.http.delete("https://axaws.herokuapp.com/api/cs/"+id).toPromise()
+        .then(res=>{
+            callback(res.json().Mensaje)
+        })
+        .catch(res=>{
+            callback(false)
+            console.log(res);    
+        })
+    }
     getADetalles(ID:string, callback){
         this.http.get("https://axaws.herokuapp.com/api/ds/"+ID).toPromise()
         .then(res=>{

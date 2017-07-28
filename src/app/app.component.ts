@@ -5,11 +5,13 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 
 import { HomePage } from '../pages/home/home';
 import { LoginPage } from "../pages/login/login";
+import { LoginOutPage } from '../pages/login/logout';
 import { HomeClientePage } from "../pages/home-cliente/home-cliente";
 import { AutosPage } from "../pages/autos/autos";
 import { HistorialPage } from "../pages/historial/historial";
 import { PerfilPage } from "../pages/perfil/perfil";
 import { ProxServiciosPage } from "../pages/prox-servicios/prox-servicios";
+import { MecanicosPage } from "../pages/mecanicos/mecanicos";
  
 @Component({
   templateUrl: 'app.html'
@@ -38,7 +40,9 @@ export class MyApp {
       {title:"Perfil",component: PerfilPage, icon:"person"},
       {title:"Mis Autos",component: AutosPage, icon:"car"},
       {title:"Servicios Realizados",component: HistorialPage, icon:"hammer"},
-      {title:"Proximos Servicios",component: ProxServiciosPage, icon:"calendar"}
+      {title:"Proximos Servicios",component: ProxServiciosPage, icon:"calendar"},
+      {title:"Mecanicos",component: MecanicosPage, icon:"build"},
+      {title:"Cerrar Sesion",component: LoginOutPage, icon:"arrow-dropleft-circle"}
     ]
 
   } 
